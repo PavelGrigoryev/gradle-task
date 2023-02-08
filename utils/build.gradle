@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+version '1.3.5'
+group 'ru.clevertec'
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.commons:commons-lang3:3.10'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+}
+
+apply from: 'uberJar.gradle'
+
+uberJar.dependsOn(test)
+
+test {
+    useJUnitPlatform()
+}
