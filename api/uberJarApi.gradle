@@ -1,0 +1,13 @@
+tasks.register('uberJarApi', Jar) {
+
+    manifest {
+        attributes('Main-Class': 'ru.clevertec.api.App')
+    }
+
+    from sourceSets.main.output
+
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
+}
