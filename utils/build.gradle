@@ -18,6 +18,7 @@ dependencies {
 
 apply from: 'uber-jar-utils.gradle'
 apply from: 'publish.gradle'
+apply from: 'plugin.gradle'
 
 test {
     useJUnitPlatform()
