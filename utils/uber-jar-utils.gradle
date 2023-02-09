@@ -1,7 +1,6 @@
-tasks.register('uberJarApi', Jar) {
-
+jar {
     manifest {
-        attributes('Main-Class': 'ru.clevertec.api.App')
+        attributes('Main-Class': 'ru.clevertec.utils.StringUtils')
     }
 
     from sourceSets.main.output

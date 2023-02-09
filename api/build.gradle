@@ -5,10 +5,11 @@ plugins {
 version '1.3.5'
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
-apply from: 'uberJarApi.gradle'
+apply from: 'uber-jar-api.gradle'
 
 dependencies {
     implementation project(':core')

@@ -1,9 +1,9 @@
-tasks.register('uberJar', Jar) {
+jar {
 
     manifest {
-        attributes('Main-Class': 'ru.clevertec.utils.StringUtils')
+        attributes('Main-Class': 'ru.clevertec.api.App')
     }
-
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from sourceSets.main.output
 
     dependsOn configurations.runtimeClasspath
